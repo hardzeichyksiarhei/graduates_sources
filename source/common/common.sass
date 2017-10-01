@@ -1,0 +1,199 @@
+@import "common-sass/vars"
+@import "common-sass/base"
+
+// Custom code
+
+section
+  position: relative
+  padding: 100px 0
+  &:not(:last-of-type)
+    border-bottom: 1px solid #95989A
+
+.s-title
+  display: inline-block
+  position: relative
+  font-weight: 300
+  text-transform: uppercase
+  text-align: center
+  font-size: 2em
+  margin: 0 0 40px
+  padding: 0 40px
+  color: #95989a
+  border-bottom: 2px solid $accent
+
+.first-letter
+  font-size: 2em
+  color: $accent
+  line-height: 1
+
+.arrow-down
+  position: absolute
+  left: calc(50% - 18px)
+  bottom: 10px
+  width: 36px
+  height: 36px
+  transform: rotate(90deg)
+  &__icon
+    transition: .25s all linear
+
+.btn
+  position: relative
+  display: inline-block
+  padding: 10px 20px 12px
+  text-decoration: none
+  text-transform: uppercase
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 4px
+    opacity: 1
+  &--while
+    background-color: #fff
+    color: $accent
+    &:before
+      background-color: $dark-accent
+
+.header
+  position: absolute
+  left: 30px
+  right: 30px
+  top: 30px
+  z-index: 1
+  height: 80px
+  display: flex
+  align-items: center
+  &__logo
+    width: 80px
+    margin-right: 20px
+  &__logo-text
+    margin-top: -4px
+  &__title
+    margin: 0
+    text-transform: uppercase
+    color: #fff
+    font-size: 16px
+    font-weight: 500
+  &__sub-title
+    margin: 0
+    color: #fff
+    font-size: 14px
+    font-weight: 500
+
+
+.navigation
+  border-bottom: 1px solid #95989A
+  height: 60px
+  &__list
+    margin: 0
+    padding: 0
+    list-style-type: none
+    text-align: center
+  &__item
+    display: inline-block
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      height: 5px
+      background-color: $accent
+      opacity: 0
+      transition: .25s all ease
+    &.active, &:hover
+      .navigation__link
+        color: $accent
+      &:before
+        opacity: 1
+  &__link
+    display: inline-block
+    line-height: 60px
+    text-decoration: none
+    text-transform: uppercase
+    color: #95989A
+    padding: 0 25px
+    &:hover
+      color: $accent
+
+.date-filter
+  position: relative
+  border-bottom: 1px solid #95989A
+  height: 60px
+  padding: 0 39px
+  .container
+    height: 100%
+
+.date-filter-carousel
+  .owl-stage-outer, .owl-stage, .owl-item
+    position: static
+    height: 100%
+  .owl-prev, .owl-next
+    position: absolute
+    top: calc(50% - 12px)
+    width: 24px
+    height: 24px
+    opacity: 1
+    transition: .25s opacity linear
+    &.disabled
+      opacity: 0
+    svg
+      fill: #aeb1b3
+  .owl-prev
+    right: 15px
+  .owl-next
+    left: 15px
+    transform: rotate(180deg)
+
+.date-filter-carousel
+  position: static !important
+  height: 100%
+  &__item
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+  &__link
+    text-decoration: none
+    color: #95989a
+
+.search-form
+  padding-top: 50px
+  &__group
+    height: 40px
+  &__btn
+    width: 50px
+    height: 40px
+    background-color: transparent
+    border: 1px solid #a8abad
+    outline: none
+    svg
+      margin: 1px auto 0
+      width: 55%
+      fill: #a8abad
+  &__control
+    float: left
+    width: calc(100% - 50px)
+    height: 40px
+    border: 1px solid #a8abad
+    border-right: none
+    padding: 0 15px
+    outline: none
+    &:focus
+      & + .search-form__btn
+        svg
+          fill: $accent
+
+.footer
+  background-color: $accent
+  &__copyright
+    margin: 0
+    padding: 1em
+    text-transform: uppercase
+    text-align: center
+    color: #fff
+
+@import "common-sass/media"

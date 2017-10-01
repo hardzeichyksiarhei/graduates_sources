@@ -1,0 +1,51 @@
+@import "vars"
+
+body, html
+  font-size: 14px
+  min-width: 320px
+  position: relative
+  line-height: 1.6
+  font-family: $default-font
+  font-weight: normal
+  overflow-x: hidden
+  background-color: #fff
+  color: $color_text
+
+*::-webkit-input-placeholder
+  color: rgba(#adaeae, .7)
+  opacity: 1
+
+*:-moz-placeholder
+  color: rgba(#adaeae, .7)
+  opacity: 1
+
+*::-moz-placeholder
+  color: rgba(#adaeae, .7)
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: rgba(#adaeae, .7)
+  opacity: 1
+
+svg
+  display: block
+  width: 100%
+  height: auto
+
+.img-responsive
+  display: block
+  width: 100%
+  height: auto
+
+.img-circle
+  border-radius: 50%
+
+.img-border
+  border: 5px solid
+  &--accent
+    border-color: $accent
+  &--white
+    border-color: #fff
+
+.center
+  text-align: center
